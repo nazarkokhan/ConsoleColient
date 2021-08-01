@@ -9,5 +9,10 @@ namespace MessengerConsole.Extensions
         {
             return DateTime.UtcNow >= tokenDto.TokenExpTime;
         }
+        
+        public static ConsoleColor ToConsoleColor(this string enumValue)
+        {
+            return Enum.Parse<ConsoleColor>(enumValue);
+        }
     }
 }

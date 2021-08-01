@@ -7,7 +7,7 @@ using MessengerConsole.DTO.Authorization.Reset;
 using MessengerConsole.DTO.User;
 using MessengerConsole.ResultModel;
 
-namespace MessengerConsole.Services.Abstraction
+namespace MessengerConsole.ApiServices.Abstraction
 {
     public interface IAccountService
     {

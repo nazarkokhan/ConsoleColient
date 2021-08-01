@@ -6,15 +6,15 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using MessengerApp.Core.DTO.Authorization;
 using MessengerApp.Core.DTO.User;
+using MessengerConsole.ApiServices.Abstraction;
 using MessengerConsole.Constants;
 using MessengerConsole.DTO;
 using MessengerConsole.DTO.Authorization;
 using MessengerConsole.DTO.Authorization.Reset;
 using MessengerConsole.DTO.User;
 using MessengerConsole.ResultModel;
-using MessengerConsole.Services.Abstraction;
 
-namespace MessengerConsole.Services
+namespace MessengerConsole.ApiServices
 {
     public class AccountService : IAccountService
     {
@@ -33,14 +33,14 @@ namespace MessengerConsole.Services
         {
             try
             {
-                var urn = $"api/account/register/token";
+                var urn = $"{ApiServiceRoute.Account}/register/token";
 
                 var json = JsonSerializer.Serialize(register);
 
                 var response = await _httpClient
                     .PostAsync(
                         urn,
-                        new StringContent(json, Encoding.UTF8, "application/json")
+                        new StringContent(json, Encoding.UTF8, FileType.Json)
                     );
 
                 response.EnsureSuccessStatusCode();
@@ -56,7 +56,7 @@ namespace MessengerConsole.Services
         public async Task<string> ConfirmRegistrationWithTokenAsync(
             string token, string userId)
         {
-            var urn = $"api/account/{token}/{userId}";
+            var urn = $"{ApiServiceRoute.Account}/{token}/{userId}";
 
             var response =
                 await _httpClient.GetAsync(urn);
@@ -77,8 +77,8 @@ namespace MessengerConsole.Services
             
             var response = await _httpClient
                 .PostAsync(
-                    "api/account/login",
-                    new StringContent(json, Encoding.UTF8, FileName.JsonType)
+                    $"{ApiServiceRoute.Account}/login",
+                    new StringContent(json, Encoding.UTF8, FileType.Json)
                 );
 
             response.EnsureSuccessStatusCode();
@@ -88,7 +88,7 @@ namespace MessengerConsole.Services
                     await response.Content.ReadAsStringAsync()
                 );
             
-            await _jsonFileTokenStorage.SaveToken(responseToken);
+            await _jsonFileTokenStorage.SaveTokenAsync(responseToken);
 
             return responseToken;
         }
@@ -100,8 +100,8 @@ namespace MessengerConsole.Services
 
             var response = await _httpClient
                 .PutAsync(
-                    "api/account/refresh-token",
-                    new StringContent(json, Encoding.UTF8, FileName.JsonType)
+                    $"{ApiServiceRoute.Account}/refresh-token",
+                    new StringContent(json, Encoding.UTF8, FileType.Json)
                 );
 
             response.EnsureSuccessStatusCode();
@@ -117,7 +117,7 @@ namespace MessengerConsole.Services
         public async Task<ProfileDto> GetProfileAsync(
             int userId)
         {
-            var urn = $"api/account/{userId}";
+            var urn = $"{ApiServiceRoute.Account}/{userId}";
 
             var response =
                 await _httpClient.GetAsync(urn);
@@ -139,8 +139,8 @@ namespace MessengerConsole.Services
 
             var response = await _httpClient
                 .PutAsync(
-                    $"api/account/{id}",
-                    new StringContent(json, Encoding.UTF8, "application/json")
+                    $"{ApiServiceRoute.Account}/{id}",
+                    new StringContent(json, Encoding.UTF8, FileType.Json)
                 );
 
             response.EnsureSuccessStatusCode();
@@ -159,8 +159,8 @@ namespace MessengerConsole.Services
 
             var response = await _httpClient
                 .PutAsync(
-                    $"api/account/{userId}",
-                    new StringContent(json, Encoding.UTF8, "application/json")
+                    $"{ApiServiceRoute.Account}/{userId}",
+                    new StringContent(json, Encoding.UTF8, FileType.Json)
                 );
 
             response.EnsureSuccessStatusCode();
@@ -180,14 +180,14 @@ namespace MessengerConsole.Services
         public async Task SendPasswordResetTokenAsync(
             ResetPasswordDto resetPasswordDto)
         {
-            var urn = $"api/account";
+            var urn = $"{ApiServiceRoute.Account}";
 
             var json = JsonSerializer.Serialize(resetPasswordDto);
 
             var response = await _httpClient
                 .PutAsync(
                     urn,
-                    new StringContent(json, Encoding.UTF8, "application/json")
+                    new StringContent(json, Encoding.UTF8, FileType.Json)
                 );
 
             response.EnsureSuccessStatusCode();
@@ -196,14 +196,14 @@ namespace MessengerConsole.Services
         public async Task ResetPasswordAsync(
             TokenPasswordDto tokenPasswordDto)
         {
-            var urn = $"api/account";
+            var urn = $"{ApiServiceRoute.Account}";
 
             var json = JsonSerializer.Serialize(tokenPasswordDto);
 
             var response = await _httpClient
                 .PutAsync(
                     urn,
-                    new StringContent(json, Encoding.UTF8, "application/json")
+                    new StringContent(json, Encoding.UTF8, FileType.Json)
                 );
 
             response.EnsureSuccessStatusCode();
@@ -212,7 +212,7 @@ namespace MessengerConsole.Services
         public async Task<Pager<UserDto>> GetUsersInChatAsync(
             int userId, int chatId, string search, int page, int items)
         {
-            var urn = $"api/account/{userId}/{chatId}";
+            var urn = $"{ApiServiceRoute.Account}/{userId}/{chatId}";
 
             if (!string.IsNullOrWhiteSpace(search))
                 urn += $"?{nameof(search)}={search}";

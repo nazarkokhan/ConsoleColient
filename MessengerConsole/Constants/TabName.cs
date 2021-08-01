@@ -1,6 +1,6 @@
 ﻿namespace MessengerConsole.Constants
 {
-    public static class BaseConst
+    public static class TabName
     {
         public const string Successful = "[success]";
         

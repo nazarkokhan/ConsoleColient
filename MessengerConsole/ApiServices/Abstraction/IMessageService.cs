@@ -3,7 +3,7 @@ using MessengerApp.Core.DTO.Message;
 using MessengerConsole.DTO;
 using MessengerConsole.DTO.Message;
 
-namespace MessengerConsole.Services.Abstraction
+namespace MessengerConsole.ApiServices.Abstraction
 {
     public interface IMessageService
     {

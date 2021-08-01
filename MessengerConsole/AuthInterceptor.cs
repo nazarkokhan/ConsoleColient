@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using MessengerConsole.Extensions;
 using MessengerApp.Core.DTO.Authorization;
-using MessengerConsole.Services.Abstraction;
+using MessengerConsole.ApiServices.Abstraction;
 
 namespace MessengerConsole
 {
@@ -30,14 +30,14 @@ namespace MessengerConsole
 
             try
             {
-                var token = await _jsonFileTokenStorage.GetToken();
+                var token = await _jsonFileTokenStorage.GetTokenAsync();
 
                 if (token.IsExpired())
                 {
                     token = await _accountService
                         .RefreshAccessToken(new RefreshTokenDto(token.Token));
 
-                    await _jsonFileTokenStorage.SaveToken(token);
+                    await _jsonFileTokenStorage.SaveTokenAsync(token);
                 }
                 
                 request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token.Token);
@@ -49,7 +49,7 @@ namespace MessengerConsole
                     token = await _accountService
                         .RefreshAccessToken(new RefreshTokenDto(token.Token));
 
-                    await _jsonFileTokenStorage.SaveToken(token);
+                    await _jsonFileTokenStorage.SaveTokenAsync(token);
 
                     request.Headers.Add("Authorization", $"Bearer {token.Token}");
                 }

@@ -2,7 +2,7 @@
 using MessengerApp.Core.DTO.Contact;
 using MessengerConsole.DTO;
 
-namespace MessengerConsole.Services.Abstraction
+namespace MessengerConsole.ApiServices.Abstraction
 {
     public interface IContactService
     {

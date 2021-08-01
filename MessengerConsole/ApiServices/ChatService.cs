@@ -4,11 +4,11 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using MessengerApp.Core.DTO.Chat;
+using MessengerConsole.ApiServices.Abstraction;
 using MessengerConsole.Constants;
 using MessengerConsole.DTO;
-using MessengerConsole.Services.Abstraction;
 
-namespace MessengerConsole.Services
+namespace MessengerConsole.ApiServices
 {
     public class ChatService : IChatService
     {
@@ -16,14 +16,14 @@ namespace MessengerConsole.Services
 
         public ChatService(IHttpClientFactory httpClientFactory)
         {
-            _httpClient = httpClientFactory.CreateClient(Client.AuthClient);
+            _httpClient = httpClientFactory.CreateClient(ClientName.Authorization);
         }
 
         public async Task<Pager<ChatDto>> GetChatsPageAsync(
             string search, int page, int items
         )
         {
-            var urn = $"api/chat";
+            var urn = $"{ApiServiceRoute.Chat}";
 
             if (!string.IsNullOrWhiteSpace(search))
                 urn += $"?{nameof(search)}={search}";
@@ -48,7 +48,7 @@ namespace MessengerConsole.Services
             int userId, string search, int page, int items
         )
         {
-            var urn = $"api/chat/{userId}";
+            var urn = $"{ApiServiceRoute.Chat}/{userId}";
 
             if (!string.IsNullOrWhiteSpace(search))
                 urn += $"?{nameof(search)}={search}";
@@ -73,14 +73,14 @@ namespace MessengerConsole.Services
             int userId, AddUserInChatDto addUserInChatDto
         )
         {
-            var urn = $"api/chat/{userId}";
+            var urn = $"{ApiServiceRoute.Chat}/{userId}";
 
             var json = JsonSerializer.Serialize(addUserInChatDto);
 
             var response = await _httpClient
                 .PostAsync(
                     urn,
-                    new StringContent(json, Encoding.UTF8, "application/json")
+                    new StringContent(json, Encoding.UTF8, FileType.Json)
                 );
 
             response.EnsureSuccessStatusCode();
@@ -96,7 +96,7 @@ namespace MessengerConsole.Services
             int id
         )
         {
-            var urn = $"api/chat/{id}";
+            var urn = $"{ApiServiceRoute.Chat}/{id}";
 
             var response =
                 await _httpClient.GetAsync(urn);
@@ -114,14 +114,14 @@ namespace MessengerConsole.Services
             int userId, CreateChatDto createChatDto
         )
         {
-            var urn = $"api/chat/{userId}";
+            var urn = $"{ApiServiceRoute.Chat}/{userId}";
 
             var json = JsonSerializer.Serialize(createChatDto);
 
             var response = await _httpClient
                 .PostAsync(
                     urn,
-                    new StringContent(json, Encoding.UTF8, "application/json")
+                    new StringContent(json, Encoding.UTF8, FileType.Json)
                 );
 
             response.EnsureSuccessStatusCode();
@@ -138,14 +138,14 @@ namespace MessengerConsole.Services
             EditChatDto editChatDto
         )
         {
-            var urn = $"api/chat/{userId}";
+            var urn = $"{ApiServiceRoute.Chat}/{userId}";
 
             var json = JsonSerializer.Serialize(editChatDto);
 
             var response = await _httpClient
                 .PutAsync(
                     urn,
-                    new StringContent(json, Encoding.UTF8, "application/json")
+                    new StringContent(json, Encoding.UTF8, FileType.Json)
                 );
 
             response.EnsureSuccessStatusCode();
@@ -162,7 +162,7 @@ namespace MessengerConsole.Services
             int id
         )
         {
-            var urn = $"api/chat/{userId}/{id}";
+            var urn = $"{ApiServiceRoute.Chat}/{userId}/{id}";
 
             var response = await _httpClient
                 .DeleteAsync(

@@ -4,6 +4,6 @@
     {
         public const string AppSettings = "appsettings.json";
         
-        public const string JsonType = "application/json";
+        public const string TokenStorage = "tokenstorage.json";
     }
 }

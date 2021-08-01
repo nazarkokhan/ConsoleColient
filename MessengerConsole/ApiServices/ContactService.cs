@@ -4,11 +4,11 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using MessengerApp.Core.DTO.Contact;
+using MessengerConsole.ApiServices.Abstraction;
 using MessengerConsole.Constants;
 using MessengerConsole.DTO;
-using MessengerConsole.Services.Abstraction;
 
-namespace MessengerConsole.Services
+namespace MessengerConsole.ApiServices
 {
     public class ContactService : IContactService
     {
@@ -16,14 +16,14 @@ namespace MessengerConsole.Services
 
         public ContactService(IHttpClientFactory httpClientFactory)
         {
-            _httpClient = httpClientFactory.CreateClient(Client.AuthClient);
+            _httpClient = httpClientFactory.CreateClient(ClientName.Authorization);
         }
 
         public async Task<Pager<ContactDto>> GetContactsPageAsync(
             int userId, string search, int page, int items
         )
         {
-            var urn = $"api/message/{userId}";
+            var urn = $"{ApiServiceRoute.Contact}/{userId}";
 
             if (!string.IsNullOrWhiteSpace(search))
                 urn += $"?{nameof(search)}={search}";
@@ -48,7 +48,7 @@ namespace MessengerConsole.Services
             int userId, int userContactId
         )
         {
-            var urn = $"api/message/{userId}/{userContactId}";
+            var urn = $"{ApiServiceRoute.Contact}/{userId}/{userContactId}";
 
             var response =
                 await _httpClient.GetAsync(urn);
@@ -66,14 +66,14 @@ namespace MessengerConsole.Services
             int userId, CreateContactDto createContactDto
         )
         {
-            var urn = $"api/message/{userId}";
+            var urn = $"{ApiServiceRoute.Contact}/{userId}";
 
             var json = JsonSerializer.Serialize(createContactDto);
 
             var response = await _httpClient
                 .PostAsync(
                     urn,
-                    new StringContent(json, Encoding.UTF8, "application/json")
+                    new StringContent(json, Encoding.UTF8, FileType.Json)
                 );
 
             response.EnsureSuccessStatusCode();
@@ -89,14 +89,14 @@ namespace MessengerConsole.Services
             int userId, EditContactDto editContactDto
         )
         {
-            var urn = $"api/message/{userId}";
+            var urn = $"{ApiServiceRoute.Contact}/{userId}";
 
             var json = JsonSerializer.Serialize(editContactDto);
 
             var response = await _httpClient
                 .PutAsync(
                     urn,
-                    new StringContent(json, Encoding.UTF8, "application/json")
+                    new StringContent(json, Encoding.UTF8, FileType.Json)
                 );
 
             response.EnsureSuccessStatusCode();
@@ -112,7 +112,7 @@ namespace MessengerConsole.Services
             int userId, int contactId
         )
         {
-            var urn = $"api/message/{userId}/{contactId}";
+            var urn = $"{ApiServiceRoute.Contact}/{userId}/{contactId}";
 
             var response = await _httpClient
                 .DeleteAsync(
