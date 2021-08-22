@@ -4,20 +4,7 @@
     <projectFile>MessengerConsole/MessengerConsole.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af4bde8e-b2f3-4923-a3ff-ed853ec8fa90" name="Default Changelist" comment="...">
-      <change afterPath="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigurationExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MessengerConsole/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MessengerConsole/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Client.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigureColorExtension.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigureExtension.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/MessengerConsole.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/MessengerConsole.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IConsoleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IConsoleService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/ColorService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Services/ColorService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/ConsoleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Services/ConsoleService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/LogInTabService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Services/LogInTabService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/appsettings.json" afterDir="false" />
-    </list>
+    <list default="true" id="af4bde8e-b2f3-4923-a3ff-ed853ec8fa90" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +38,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/ILogInService.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/Properties/launchSettings.json" />
       <option value="$PROJECT_DIR$/MessengerConsole/Constants/HttpClient.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/Constants/ClientName.cs" />
@@ -96,11 +82,12 @@
       <option value="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigurationExtensions.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/ConfigurationOptions/CommandOptionsOld.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/ConfigurationOptions/Dog.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigureOptionsExtensions.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/appsettings.json" />
       <option value="$PROJECT_DIR$/MessengerConsole/Program.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/Services/LogInTabService.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigureOptionsExtensions.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/ConfigurationOptions/CursorOptions.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/Services/ConsoleService.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/appsettings.json" />
       <option value="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IConsoleService.cs" />
     </changedPaths>
   </component>
@@ -151,7 +138,7 @@
       <updated>1627744308475</updated>
       <workItem from="1627744313063" duration="16158000" />
       <workItem from="1627804376057" duration="37011000" />
-      <workItem from="1629647157387" duration="15030000" />
+      <workItem from="1629647157387" duration="17655000" />
     </task>
     <task id="LOCAL-00001" summary="...">
       <created>1627744346999</created>
@@ -160,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627744346999</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changes))))))))))))))))))))))))))))))))))))))">
+      <created>1629669274917</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1629669274917</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,7 +177,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="Changes))))))))))))))))))))))))))))))))))))))" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes))))))))))))))))))))))))))))))))))))))" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
