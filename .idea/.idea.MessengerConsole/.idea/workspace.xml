@@ -5,28 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af4bde8e-b2f3-4923-a3ff-ed853ec8fa90" name="Default Changelist" comment="...">
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/AuthInterceptor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/AuthInterceptor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Constants/Api.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Constants/BaseConst.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Constants/TabName.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Constants/Client.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Constants/Device.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Constants/Dto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Constants/FileName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Constants/FileName.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Constants/LoginData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigurationExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigureExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Extensions/Extension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Extensions/Extension.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigurationExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MessengerConsole/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MessengerConsole/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MessengerConsole/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigureColorExtension.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigureExtension.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MessengerConsole/MessengerConsole.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/MessengerConsole.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MessengerConsole/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IAccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/ApiServices/Abstraction/IAccountService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IChatService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/ApiServices/Abstraction/IChatService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IContactService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/ApiServices/Abstraction/IContactService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IMessageService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/ApiServices/Abstraction/IMessageService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/ITokenStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/ApiServices/Abstraction/ITokenStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/AccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/ApiServices/AccountService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/ChatService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/ApiServices/ChatService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/ContactService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/ApiServices/ContactService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/JsonFileTokenStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/ApiServices/TokenStorageJsonFile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/MessageService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/ApiServices/MessageService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IConsoleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IConsoleService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/ColorService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Services/ColorService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/ConsoleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Services/ConsoleService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MessengerConsole/Services/LogInTabService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/Services/LogInTabService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MessengerConsole/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MessengerConsole/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,33 +42,15 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/39834944-BEBD-4EAD-AFD1-13D483329F4D/8/MemoryCacheExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1CAEA579-7BC0-4E55-ADEB-CC8011B21AB8/3/OptionsServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Я/source/repos/MessengerConsole/MessengerConsole/Extensions/Extension.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/61F5185B-E9CF-48B9-8487-181D7861EB9C/233/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Я/source/repos/MessengerConsole/MessengerConsole/Extensions/Extension.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/600469FE-AED5-4EDD-806E-09990EB885A4/4/Console.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IRegistrationService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8ACA7B55-3F8E-4F20-AC57-47AA98D503A5/7/ConsolePal.Windows.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8ACA7B55-3F8E-4F20-AC57-47AA98D503A5/4/Console.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8ACA7B55-3F8E-4F20-AC57-47AA98D503A5/32/4c4a93b1/ConsoleColor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D01EA799-E9C9-4F77-A043-C8ECB5387E2F/2E/ToCollection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E6E6B40B-308C-4FE1-9C93-7C26C144C865/5A/AppContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/687CD3EF-1206-406C-8B82-2CB02EE0595E/7/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1BA52DC0-B103-422E-BA91-AD87A1AA9FE3/9/ServiceProviderServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E6E6B40B-308C-4FE1-9C93-7C26C144C865/233/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/MessengerConsole/ConsoleWrite.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/Services/IRegisterService.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IRegisterService.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IRegistrationService.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/Run.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IConsoleService.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/Services/RegistrationService.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/Services/LogInService.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/ILogInService.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/Properties/launchSettings.json" />
       <option value="$PROJECT_DIR$/MessengerConsole/Constants/HttpClient.cs" />
@@ -105,19 +77,31 @@
       <option value="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigurationColorExtensions.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigureColorExtensions.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigureColorExtension.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/appsettings.json" />
       <option value="$PROJECT_DIR$/MessengerConsole/Constants/Cache.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigureExtension.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IColorService.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IWriteService.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/Services/WriteService.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/Program.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/Services/ColorService.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/Services/ConsoleService.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IRegisterTabService.cs" />
-      <option value="$PROJECT_DIR$/MessengerConsole/Services/LogInTabService.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/Services/RegisterTabService.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/ConfigurationOptions/ColorOptions.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/AuthInterceptor.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/ConfigurationOptions/Command.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/ConfigurationOptions/CommandsOptions.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigureExtension.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/Services/ColorService.cs" />
       <option value="$PROJECT_DIR$/MessengerConsole/Client.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigureOptions.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/ConfigurationOptions/ExampleOptions.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigureExtensions.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigurationExtensions.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/ConfigurationOptions/CommandOptionsOld.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/ConfigurationOptions/Dog.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/Extensions/ConfigureOptionsExtensions.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/appsettings.json" />
+      <option value="$PROJECT_DIR$/MessengerConsole/Program.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/Services/LogInTabService.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/Services/ConsoleService.cs" />
+      <option value="$PROJECT_DIR$/MessengerConsole/Services/Abstraction/IConsoleService.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1w5N5L4nfNfCEyCMLWyDoHKYj6H" />
@@ -129,12 +113,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.56618613" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.5660025" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.20857474" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.26433566" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -167,6 +151,7 @@
       <updated>1627744308475</updated>
       <workItem from="1627744313063" duration="16158000" />
       <workItem from="1627804376057" duration="37011000" />
+      <workItem from="1629647157387" duration="15030000" />
     </task>
     <task id="LOCAL-00001" summary="...">
       <created>1627744346999</created>
@@ -181,6 +166,8 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>

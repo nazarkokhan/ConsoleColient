@@ -23,8 +23,8 @@ namespace MessengerConsole
 
         public async Task RunAsync()
         {
-            _console.SetupConsole();
-            _console.Commands();
+            _console.CleanConsole();
+            _console.AvailableCommands();
 
             while (true)
             {
@@ -33,6 +33,11 @@ namespace MessengerConsole
             // ReSharper disable once FunctionNeverReturns
         }
 
+        public void Run()
+        {
+            RunAsync().GetAwaiter().GetResult();
+        }
+        
         public string ChooseCommand(string command) => command switch
         {
             "/home" => "a",

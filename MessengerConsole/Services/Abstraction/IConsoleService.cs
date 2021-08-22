@@ -2,12 +2,14 @@
 {
     public interface IConsoleService
     {
-        void SetupConsole();
+        void CleanConsole();
         
-        void Commands();
+        void AvailableCommands();
+
+        void ReadCommand(int l, int t);
 
         void WriteTab(string tab);
 
-        void ReadCmd();
+        void ReadLine(int l, int r);
     }
 }
